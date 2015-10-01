@@ -1,0 +1,15 @@
+.location {
+	@include span-columns(3);
+}
+
+#contact-form {
+	@include span-columns(8);
+}
+
+#contact {
+	margin-bottom: 25px;
+	h2 {
+		font-size: 16px;
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,61 @@
+//Descriptive color variables
+
+$white	:	#fff;
+$black	:	#000;
+$grey	:	#878787;
+$red	: red;
+$blue 	: blue;
+
+
+//Functional color variables
+
+$color-prim	:	$grey;
+$color-sec	:	$red;
+
+$color-text-light	:	$white;
+$color-text-base	:	$grey;
+$color-text-dark	:	$black;
+
+$color-border-light : lighten($grey, 35%);
+$color-link-default : $blue;
+$color-link-visited : $red;
+
+$color-shadow	:	rgba($black,.8);
+$color-body		:	$white;
+$color-back     :   $grey;
+
+
+//Font Stacks
+
+$stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
+$stack-abolition  : 'Abolition Regular', $stack-sans-serif;
+
+//Border Radius
+
+$border-radius: 10px;
+
+// Asset paths
+
+$path-img : '../images';
+$path-font : '../fonts';
+
+//Columns
+$one-col : 6.866%;
+$two-col : 15.33%;
+$three-col : 23.88%;
+$four-col: 32.36%;
+$five-col: 40.73%;
+$six-col: 49.2%;
+$seven-col: 57.66%;
+$eight-col: 66.13%;
+$nine-col: 74.6%;
+$ten-col: 83.06%;
+$eleven-col: 91.53%;
+$twelve-col: 100%;
+
+// Media query breakpoints
+
+$brk-narrow : '(max-width: 768px)';
+$brk-wide 	: '(max-width: 1024px)';
+$large-screen: em(860) !default;

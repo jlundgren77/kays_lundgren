@@ -1,0 +1,13 @@
+
+
+.employee {
+	@inlude outer-container;
+}
+
+.employee-image {
+	@include span-columns(3);
+}
+
+.employee-info {
+	@include span-columns(8);
+}

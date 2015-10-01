@@ -1,0 +1,29 @@
+// Center text
+
+%centered {
+	text-align: center;
+}
+
+
+// Bottom border
+
+%b-border {
+	border-bottom: 2px solid $color-border-light;
+}
+
+//Containers
+
+%container {
+	width: 100%;
+	margin: auto;
+	max-width: 960px;
+	padding: 20px;
+
+	@media #{brk-narrow} {
+		border-bottom: none;
+	}
+}
+
+
+//Columns
+

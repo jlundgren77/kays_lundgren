@@ -1,0 +1,15 @@
+.employee {
+	@include row();
+	margin-bottom: 2em;
+	padding: 25px;
+	
+	
+}
+
+.employee-image {
+	
+	@extend %centered;
+	img {
+		width: 150px;
+	}
+}

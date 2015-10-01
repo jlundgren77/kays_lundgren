@@ -1,0 +1,222 @@
+.main-header {
+	@extend %container
+}
+
+
+header {
+	
+	width: 100%;
+	height: 125px;
+
+	/*border-bottom: 2px solid #283744;*/
+	@extend %b-border;
+	z-index: 100;
+    background-color: $white;
+    @include position(fixed, 0 null null 0);
+
+}
+
+.nav {
+	@include transition(all 0.3s ease-in-out);
+}
+nav {
+
+	
+	/*background: #DCDCDC;*/
+	
+    
+	position: relative;
+	
+	@include clearfix;
+
+	ul {
+		width: 600px;
+		height: 75px;
+		float: right;
+		
+		padding-top: 15px;
+		@include clearfix;
+
+	}
+
+	li {
+		display: inline;
+	}
+
+    a {
+    	
+		display: inline-block;
+		width: 100px;
+		
+    }
+
+    
+
+    
+}
+
+
+#logo {
+	margin: 20px;
+	float: left;
+	@include size(200px 75px);
+	display: block;
+	/*background-color: red;*/
+	background: url(#{$path-img}/logo.png) no-repeat center;
+
+}
+
+#dropdown {
+	float: right;
+	display: none;
+	position: relative;
+	height: 60px
+
+	}
+
+
+
+ 
+@media only screen and (max-width: 840px) {
+	nav {
+		ul {
+			width: 400px;
+		}
+		a {
+			
+			width: 75px;
+		}
+	}
+	
+}
+@media only screen and (max-width: 640px) {
+	nav {
+		border-bottom: 0;
+		width: 100%;
+
+		ul {
+			display: none;
+			height: auto;
+			width: 100%;
+			text-align: center;
+			background-color: $color-back;
+		}
+
+		#dropdown {
+			display: block;
+			width: 100%;
+			
+			position: relative;
+		}
+	}
+	
+    nav .fa fa-bars {
+    	color: #283744;
+    }
+	nav a#dropdown:after {
+		content: "";
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		
+		@include position(absolute, 10px 15px null null);
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+	nav li {
+		display: block;
+		float: none;
+		width: 100%;
+
+	}
+	
+}
+
+.hero {  
+ 
+  height: 635px;	
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-background-top: #1e5799; 
+  $hero-background-bottom: #7db9e8;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image: '../images/461056_0.jpg';
+  $max-width: 1000px;
+  /*@include background(linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), url($hero-image),no-repeat $hero-background-top scroll);*/
+  @include background-image(linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0)), url($hero-image));
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3em;
+  margin-top: 100px;
+  /*.hero-logo img {
+    height: 4em;
+    margin-bottom: 1em;
+  }*/
+
+  .hero-inner {
+    /*@include outer-container;*/
+    @include position(relative, 5em null null null);
+
+    @include clearfix;
+
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+    width: 75%;
+    color: lighten($hero-background-bottom, 25%);
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    
+
+    .hero-copy {
+      text-align: center;
+      
+      h1 {
+        
+        
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        /*@include span-columns(6);*/
+        @include media($large-screen) {
+          font-size: 3.25em;
+
+        }
+      }
+
+      h2 {
+      	
+      	font-size: 1.5em;
+		
+      	@include media($large-screen) {
+      		font-size: 2em;
+
+      	}
+      }
+
+      p {
+        
+        line-height: 1.4em;
+        margin: 0 auto 1em auto; 
+
+        @include media($large-screen) {
+          font-size: 1em;
+          max-width: 40%;
+        }
+      }
+
+      i {
+      	font-size: 1.2em;
+      	font-weight: 600;
+      	letter-spacing: 2px;
+      	color: lighten($blue, 50);
+      }
+    }
+  }
+}

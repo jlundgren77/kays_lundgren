@@ -1,0 +1,25 @@
+#services {
+	
+  	
+    .service {
+		@extend %centered;
+		margin-bottom: 30px;
+		padding: 10px;
+        h2 {
+            color: $black;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+
+    	@include media($large-screen) {
+    		@include span-columns(3);
+    		margin-right: 7.35765%;
+    		width: 24.2318%;
+
+    		
+    	}
+    	
+    }
+  	
+}
